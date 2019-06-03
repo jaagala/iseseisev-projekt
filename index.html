@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kalkulaator</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <audio id="oneAudio" src="sounds/one.mp3" autoplay="false"></audio>
+    <audio id="twoAudio" src="sounds/two.mp3" autoplay="false"></audio>
+    <audio id="threeAudio" src="sounds/three.mp3" autopplay="false"></audio>
+    <audio id="fourAudio" src="sounds/four.mp3" autoplay="false"></audio>
+    <audio id="fiveAudio" src="sounds/five.mp3" autoplay="false"></audio>
+    <audio id="sixAudio" src="sounds/six.mp3" autoplay="false"></audio>
+    <audio id="sevenAudio" src="sounds/seven.mp3" autoplay="false"></audio>
+    <audio id="eightAudio" src="sounds/eight.mp3" autoplay="false"></audio>
+    <audio id="nineAudio" src="sounds/nine.mp3" autoplay="false"></audio>
+    <audio id="starAudio" src="sounds/star.mp3" autoplay="false"></audio>
+    <audio id="hashAudio" src="sounds/hash.mp3" autoplay="false"></audio>
+</head>
+<body>
+    <div class="calc">
+        <form name="form">
+            <input class="calc-display">
+        </form>
+        <table>
+            <tr>
+                <td><input type="button" value="C" id="clear" onclick="c(); cShadow(); starSound()"></td>
+                <td><input type="button" value="⌫" id="del" onclick="del(); delShadow(); starSound()"></td>
+                <td><input type="button" value="/" id="divided" onclick="instr('/'); divShadow(); starSound()"></td>
+                <td><input type="button" value="*" id="times" onclick="instr('*'); timesShadow(); starSound()"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="7" id="seven" onclick="instr(7); sevenShadow(); sevenSound()"></td>
+                <td><input type="button" value="8" id="eight" onclick="instr(8); eightShadow(); eightSound()"></td>
+                <td><input type="button" value="9" id="nine" onclick="instr(9); nineShadow(); nineSound()"></td>
+                <td><input type="button" value="-" id="minus" onclick="instr('-'); minusShadow(); hashSound()"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="4" id="four" onclick="instr(4); fourShadow(); fourSound()"></td>
+                <td><input type="button" value="5" id="five" onclick="instr(5); fiveShadow(); fiveSound()"></td>
+                <td><input type="button" value="6" id="six" onclick="instr(6); sixShadow(); sixSound()"></td>
+                <td><input type="button" value="+" id="plus" onclick="instr('+'); plusShadow(); hashSound()"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="1" id="one" onclick="instr(1); oneShadow(); oneSound()"></td>
+                <td><input type="button" value="2" id="two" onclick="instr(2); twoShadow(); twoSound()" ></td>
+                <td><input type="button" value="3" id="three" onclick="instr(3); threeShadow(); threeSound()"></td>
+                <td rowspan=2><input type="button" id="equals" value="=" onclick="equals(); equalsShadow(); hashSound()" id="equals"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="button" value="0" id="zero" onclick="instr(0); zeroShadow(); zeroSound()" style="width: 158px;"></td>
+                <td><input type="button" value="." id="dot" onclick="instr('.'); dotShadow(); hashSound()"></td>
+            </tr>
+        </table>
+    </div>
+    
+    <div id="nameTag" >
+        <p id="tag">Kalkulaator</p>
+        <p id="name">Jaagup Aland</p>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
